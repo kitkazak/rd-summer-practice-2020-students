@@ -1,3 +1,105 @@
-.hidden{
-  display: none;
+.gamebox {
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  box-shadow: 5px 10px 8px #444;
+}
+
+.header {
+  background-color: #505050;
+  border-radius: 10px;
+  display: flex;
+}
+
+#game-name {
+  /* display: flex; */
+  color: white;
+  margin: 10px 0;
+  font-size: 3rem;
+}
+
+#game-status {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#game-status span {
+  color: #000;
+  background-color: #e3bf30;
+  font-size: 1.5rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.timer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.timer span {
+  display: inline-block;
+  font-size: 5rem;
+  color: white;
+}
+
+.game-area {
+  margin-top: 20px;
+  color: white;
+}
+
+.teambox {
+  background-color: #444444;
+}
+
+.teambox ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.teambox ul li {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.police ul li {
+  border-bottom: 1px solid #43a9f9;
+}
+
+.thugs ul li {
+  border-bottom: 1px solid #e3bf30;
+}
+.teambox ul li:last-of-type {
+  border-bottom: none;
+}
+
+.teambox ul li span {
+  display: inline-block;
+}
+
+.police .team-name {
+  padding: 5px 10px;
+  background-color: #43a9f9;
+}
+
+.thugs .team-name {
+  padding: 5px 10px;
+  background-color: #e3bf30;
+  color: #2c2c2c;
+}
+
+.police {
+  border: 1px solid #43a9f9;
+  border-radius: 5px;
+}
+
+.thugs {
+  border: 1px solid #e3bf30;
+  border-radius: 5px;
+}
+
+.footer {
+  margin-top: 20px;
 }
