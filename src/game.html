@@ -17,9 +17,9 @@
 <!-- TODO: Task 0. Построить вёрстку приложения по макету
           используя для сетки bootstrap -->
 <body style="background-color: #696969;">
-    <div class="container gamebox">
+    <div class="container gamebox" id="game">
         <div class="container-fluid header">
-            <h1 id="game-name" style="color: white; display: inline-block;">Название игры
+            <h1 id="gameCaption" style="color: white; display: inline-block;">Название игры
                 <!-- <span id="game-status">ожидается регистрация</span> -->
             </h1>
             <div id="game-status">
@@ -27,38 +27,44 @@
             </div>
         </div>
         <div class="container-fluid timer">
-            <span>00:00</span>
+            <span id="switchTimer">00:00</span>
         </div>
         <div class="container-fluid game-area">
             <div class="row">
                 <div class="col-md-2">
-                    <div class="teambox police" style="color: white">
-                        <div class="team-name">Полиция</div>
+                    <div id="team1Container" class="teambox police" style="color: white">
+                        <div id="team1Caption" class="team-name">Полиция</div>
                         <ul>
                             <li><span class="teambox-propname">Жизни</span><span class="teambox-propvalue">228</span></li>
                             <li><span class="teambox-propname">Монеты</span><span class="teambox-propvalue">1337</span></li>
                         </ul>
+                    <div id="team1Players"></div>
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <canvas></canvas>
+                    <canvas id="gameCanvas"></canvas>
                 </div>
                 <div class="col-md-2">
-                    <div class="teambox thugs" style="color: white">
+                    <div id="team2Container" class="teambox thugs" style="color: white">
                         <div class="team-name">Мошенники</div>
                         <ul>
                             <li><span class="teambox-propname">Жизни</span><span class="teambox-propvalue">228</span></li>
                             <li><span class="teambox-propname">Монеты</span><span class="teambox-propvalue">1337</span></li>
                         </ul>
+                    <div id="team2Players"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid footer">
-            <button type="button" class="btn btn-success">Начать игру</button>
-            <button type="button" class="btn btn-info">К списку игр</button>
-            <button type="button" class="btn btn-warning">Покинуть игру</button>
-            <button type="button" class="btn btn-danger">Прервать игру</button>    
+            <button id="btnGameList" type="button" class="btn btn-info">К списку игр</button>
+            <button id="btnStart" type="button" class="hidden btn btn-success">Начать игру</button>
+            <button id="btnLeave" type="button" class="hidden btn btn-warning">Покинуть игру</button>
+            <button id="btnCancel" type="button" class="hidden btn btn-danger">Прервать игру</button>
+            <button id="btnConnect" type="button" class="hidden btn btn-primary">Подключится к игре (случайно)</button>
+            <button id="btnConnectPolice" type="button" class="hidden btn btn-primary">Подключится к Полиция</button>  
+            <button id="btnConnectThief" type="button" class="hidden btn btn-primary">Подключится к Мошенники</button>  
+            <button id="btnPause" type="button" class="hidden btn btn-primary">Пауза</button>      
         </div>
     </div>
 
